@@ -73,7 +73,7 @@ namespace StudentList.Controllers
             }
 
             if (ModelState.IsValid) // xu ly tinh dung dan cua du lieu body truyen vao
-            {// đoạn này framework đang tự xử lý validate gái trị truyền vào, cái Course đang null, em tự sửa tiếp nhé
+            {
                 courseToUpdate.CourseName = course.CourseName;
                 _context.Courses.Update(courseToUpdate);
                 _context.SaveChanges();
@@ -109,7 +109,7 @@ namespace StudentList.Controllers
             }
 
             if (ModelState.IsValid) // xu ly tinh dung dan cua du lieu body truyen vao
-            {// đoạn này framework đang tự xử lý validate gái trị truyền vào, cái Course đang null, em tự sửa tiếp nhé
+            {
                 courseToDelete.CourseName = course.CourseName;
                 _context.Courses.Remove(courseToDelete);
                 _context.SaveChanges();
